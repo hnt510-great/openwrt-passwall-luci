@@ -7,9 +7,8 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=luci-app-passwall
-PKG_VERSION:=26.10.22
-PKG_RELEASE:=2
-PKG_PO_VERSION:=$(PKG_VERSION)
+# Use luci.mk's independent Git revisions for code and translations. Upstream
+# changes both between its manual version bumps; published APKs are immutable.
 
 PKG_CONFIG_DEPENDS:= \
 	CONFIG_PACKAGE_$(PKG_NAME)_Iptables_Transparent_Proxy \
